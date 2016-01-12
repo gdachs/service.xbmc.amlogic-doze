@@ -82,6 +82,7 @@ if __name__ == '__main__':
     AmlogicDoze = AmlogicDoze()
     if AmlogicDoze.hasDoze():
         AmlogicDoze.setWakeLock()
+        AmlogicDoze.wakeFromDoze()
         monitor = XBMCMonitor(doze=AmlogicDoze)
 
         while not xbmc.abortRequested:
